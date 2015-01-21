@@ -14,7 +14,6 @@
 		2713531C1A6FC73A0076879B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2713531A1A6FC73A0076879B /* Credits.rtf */; };
 		271353A21A6FC8440076879B /* crytek-sponza in Resources */ = {isa = PBXBuildFile; fileRef = 271353A01A6FC8440076879B /* crytek-sponza */; };
 		271353A31A6FC8440076879B /* shaders in Resources */ = {isa = PBXBuildFile; fileRef = 271353A11A6FC8440076879B /* shaders */; };
-		278320FC1A68562F00585E14 /* Awesomium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278320FB1A68562E00585E14 /* Awesomium.framework */; };
 		278A09A71A3E05F900714254 /* libassimp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278A09A61A3E05F900714254 /* libassimp.a */; };
 		278A09A91A3E0E0200714254 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 278A09A81A3E0E0200714254 /* libz.dylib */; };
 		27ADD74A1A6EDAB500C168C4 /* RenderTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27ADD7461A6EDAB500C168C4 /* RenderTarget.cpp */; };
@@ -43,7 +42,6 @@
 		2713531B1A6FC73A0076879B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = Playground/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
 		271353A01A6FC8440076879B /* crytek-sponza */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "crytek-sponza"; path = "Resources/crytek-sponza"; sourceTree = "<group>"; };
 		271353A11A6FC8440076879B /* shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = shaders; path = Resources/shaders; sourceTree = "<group>"; };
-		278320FB1A68562E00585E14 /* Awesomium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Awesomium.framework; path = ../../../../Library/Frameworks/Awesomium.framework; sourceTree = "<group>"; };
 		278A09A61A3E05F900714254 /* libassimp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libassimp.a; path = "../assimp-3.1.1/build/code/Release/libassimp.a"; sourceTree = "<group>"; };
 		278A09A81A3E0E0200714254 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		27ADD7451A6EDAA800C168C4 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stb_image.h; path = sources/stb_image/stb_image.h; sourceTree = SOURCE_ROOT; };
@@ -87,7 +85,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				278320FC1A68562F00585E14 /* Awesomium.framework in Frameworks */,
 				278A09A91A3E0E0200714254 /* libz.dylib in Frameworks */,
 				278A09A71A3E05F900714254 /* libassimp.a in Frameworks */,
 				27B169C81A337D950031C184 /* QuartzCore.framework in Frameworks */,
@@ -135,7 +132,6 @@
 		27B168191A3376A30031C184 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				278320FB1A68562E00585E14 /* Awesomium.framework */,
 				278A09A81A3E0E0200714254 /* libz.dylib */,
 				278A09A61A3E05F900714254 /* libassimp.a */,
 				27B169CB1A3385DB0031C184 /* libGLEW.a */,
@@ -414,16 +410,16 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/glm",
-					"$(SRCROOT)/glfw-3.0.4/include",
-					"$(SRCROOT)/glew-1.11.0/include",
-					"$(SRCROOT)/assimp-3.1.1/include",
+					"$(SRCROOT)/glfw/include",
+					"$(SRCROOT)/glew/include",
+					"$(SRCROOT)/assimp/include",
 				);
 				INFOPLIST_FILE = "Playground/Playground-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/glfw-3.0.4/build/src/Debug",
-					"$(SRCROOT)/glew-1.11.0/lib",
-					"$(SRCROOT)/assimp-3.1.1/libs/OSX",
+					"$(SRCROOT)/glfw/libs/OSX",
+					"$(SRCROOT)/glew/libs/OSX",
+					"$(SRCROOT)/assimp/libs/OSX",
 				);
 				PRODUCT_NAME = Playground;
 				WRAPPER_EXTENSION = app;
@@ -445,16 +441,16 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/glm",
-					"$(SRCROOT)/glfw-3.0.4/include",
-					"$(SRCROOT)/glew-1.11.0/include",
-					"$(SRCROOT)/assimp-3.1.1/include",
+					"$(SRCROOT)/glfw/include",
+					"$(SRCROOT)/glew/include",
+					"$(SRCROOT)/assimp/include",
 				);
 				INFOPLIST_FILE = "Playground/Playground-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/glfw-3.0.4/build/src/Debug",
-					"$(SRCROOT)/glew-1.11.0/lib",
-					"$(SRCROOT)/assimp-3.1.1/libs/OSX",
+					"$(SRCROOT)/glfw/libs/OSX",
+					"$(SRCROOT)/glew/libs/OSX",
+					"$(SRCROOT)/assimp/libs/OSX",
 				);
 				PRODUCT_NAME = Playground;
 				WRAPPER_EXTENSION = app;
