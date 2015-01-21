@@ -423,7 +423,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/glfw-3.0.4/build/src/Debug",
 					"$(SRCROOT)/glew-1.11.0/lib",
-					"$(SRCROOT)/assimp-3.1.1/build/code/Release",
+					"$(SRCROOT)/assimp-3.1.1/libs/OSX",
 				);
 				PRODUCT_NAME = Playground;
 				WRAPPER_EXTENSION = app;
@@ -454,7 +454,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/glfw-3.0.4/build/src/Debug",
 					"$(SRCROOT)/glew-1.11.0/lib",
-					"$(SRCROOT)/assimp-3.1.1/build/code/Release",
+					"$(SRCROOT)/assimp-3.1.1/libs/OSX",
 				);
 				PRODUCT_NAME = Playground;
 				WRAPPER_EXTENSION = app;
