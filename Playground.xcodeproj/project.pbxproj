@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		271353131A6FC70A0076879B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 271353111A6FC70A0076879B /* main.cpp */; };
+		271353141A6FC70A0076879B /* Playground-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 271353121A6FC70A0076879B /* Playground-Info.plist */; };
+		271353161A6FC71E0076879B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 271353151A6FC71E0076879B /* Images.xcassets */; };
+		271353191A6FC7310076879B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 271353171A6FC7310076879B /* InfoPlist.strings */; };
+		2713531C1A6FC73A0076879B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2713531A1A6FC73A0076879B /* Credits.rtf */; };
+		271353A21A6FC8440076879B /* crytek-sponza in Resources */ = {isa = PBXBuildFile; fileRef = 271353A01A6FC8440076879B /* crytek-sponza */; };
+		271353A31A6FC8440076879B /* shaders in Resources */ = {isa = PBXBuildFile; fileRef = 271353A11A6FC8440076879B /* shaders */; };
+		278320FC1A68562F00585E14 /* Awesomium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278320FB1A68562E00585E14 /* Awesomium.framework */; };
+		278A09A71A3E05F900714254 /* libassimp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278A09A61A3E05F900714254 /* libassimp.a */; };
+		278A09A91A3E0E0200714254 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 278A09A81A3E0E0200714254 /* libz.dylib */; };
+		27ADD74A1A6EDAB500C168C4 /* RenderTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27ADD7461A6EDAB500C168C4 /* RenderTarget.cpp */; };
+		27ADD74B1A6EDAB500C168C4 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27ADD7481A6EDAB500C168C4 /* Texture.cpp */; };
+		27ADD7601A6EDAC800C168C4 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27ADD74C1A6EDAC800C168C4 /* Application.cpp */; };
+		27ADD7611A6EDAC800C168C4 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27ADD74E1A6EDAC800C168C4 /* Camera.cpp */; };
+		27ADD7631A6EDAC800C168C4 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27ADD7521A6EDAC800C168C4 /* Material.cpp */; };
+		27ADD7641A6EDAC800C168C4 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27ADD7541A6EDAC800C168C4 /* Mesh.cpp */; };
+		27ADD7651A6EDAC800C168C4 /* MeshBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27ADD7561A6EDAC800C168C4 /* MeshBuffer.cpp */; };
+		27ADD7661A6EDAC800C168C4 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27ADD7591A6EDAC800C168C4 /* Renderer.cpp */; };
+		27ADD7671A6EDAC800C168C4 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27ADD75B1A6EDAC800C168C4 /* Shader.cpp */; };
+		27ADD7681A6EDAC800C168C4 /* Utility.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27ADD75E1A6EDAC800C168C4 /* Utility.mm */; };
+		27B1681B1A3376A30031C184 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B1681A1A3376A30031C184 /* Cocoa.framework */; };
+		27B169BE1A3379CA0031C184 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B169BD1A3379CA0031C184 /* libglfw3.a */; };
+		27B169C41A337D140031C184 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B169C31A337D140031C184 /* OpenGL.framework */; };
+		27B169C61A337D300031C184 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B169C51A337D300031C184 /* IOKit.framework */; };
+		27B169C81A337D950031C184 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B169C71A337D950031C184 /* QuartzCore.framework */; };
+		27B169CC1A3385DB0031C184 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B169CB1A3385DB0031C184 /* libGLEW.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		271353111A6FC70A0076879B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Playground/main.cpp; sourceTree = SOURCE_ROOT; };
+		271353121A6FC70A0076879B /* Playground-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Playground-Info.plist"; path = "Playground/Playground-Info.plist"; sourceTree = SOURCE_ROOT; };
+		271353151A6FC71E0076879B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Playground/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		271353181A6FC7310076879B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Playground/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		2713531B1A6FC73A0076879B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = Playground/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
+		271353A01A6FC8440076879B /* crytek-sponza */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "crytek-sponza"; path = "Resources/crytek-sponza"; sourceTree = "<group>"; };
+		271353A11A6FC8440076879B /* shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = shaders; path = Resources/shaders; sourceTree = "<group>"; };
+		278320FB1A68562E00585E14 /* Awesomium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Awesomium.framework; path = ../../../../Library/Frameworks/Awesomium.framework; sourceTree = "<group>"; };
+		278A09A61A3E05F900714254 /* libassimp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libassimp.a; path = "../assimp-3.1.1/build/code/Release/libassimp.a"; sourceTree = "<group>"; };
+		278A09A81A3E0E0200714254 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		27ADD7451A6EDAA800C168C4 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stb_image.h; path = sources/stb_image/stb_image.h; sourceTree = SOURCE_ROOT; };
+		27ADD7461A6EDAB500C168C4 /* RenderTarget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderTarget.cpp; path = sources/Textures/RenderTarget.cpp; sourceTree = SOURCE_ROOT; };
+		27ADD7471A6EDAB500C168C4 /* RenderTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderTarget.h; path = sources/Textures/RenderTarget.h; sourceTree = SOURCE_ROOT; };
+		27ADD7481A6EDAB500C168C4 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = sources/Textures/Texture.cpp; sourceTree = SOURCE_ROOT; };
+		27ADD7491A6EDAB500C168C4 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = sources/Textures/Texture.h; sourceTree = SOURCE_ROOT; };
+		27ADD74C1A6EDAC800C168C4 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Application.cpp; path = sources/Application.cpp; sourceTree = SOURCE_ROOT; };
+		27ADD74D1A6EDAC800C168C4 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Application.h; path = sources/Application.h; sourceTree = SOURCE_ROOT; };
+		27ADD74E1A6EDAC800C168C4 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = sources/Camera.cpp; sourceTree = SOURCE_ROOT; };
+		27ADD74F1A6EDAC800C168C4 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = sources/Camera.h; sourceTree = SOURCE_ROOT; };
+		27ADD7521A6EDAC800C168C4 /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = sources/Material.cpp; sourceTree = SOURCE_ROOT; };
+		27ADD7531A6EDAC800C168C4 /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Material.h; path = sources/Material.h; sourceTree = SOURCE_ROOT; };
+		27ADD7541A6EDAC800C168C4 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mesh.cpp; path = sources/Mesh.cpp; sourceTree = SOURCE_ROOT; };
+		27ADD7551A6EDAC800C168C4 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = sources/Mesh.h; sourceTree = SOURCE_ROOT; };
+		27ADD7561A6EDAC800C168C4 /* MeshBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MeshBuffer.cpp; path = sources/MeshBuffer.cpp; sourceTree = SOURCE_ROOT; };
+		27ADD7571A6EDAC800C168C4 /* MeshBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeshBuffer.h; path = sources/MeshBuffer.h; sourceTree = SOURCE_ROOT; };
+		27ADD7581A6EDAC800C168C4 /* pch.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pch.pch; path = sources/pch.pch; sourceTree = SOURCE_ROOT; };
+		27ADD7591A6EDAC800C168C4 /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer.cpp; path = sources/Renderer.cpp; sourceTree = SOURCE_ROOT; };
+		27ADD75A1A6EDAC800C168C4 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer.h; path = sources/Renderer.h; sourceTree = SOURCE_ROOT; };
+		27ADD75B1A6EDAC800C168C4 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shader.cpp; path = sources/Shader.cpp; sourceTree = SOURCE_ROOT; };
+		27ADD75C1A6EDAC800C168C4 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = sources/Shader.h; sourceTree = SOURCE_ROOT; };
+		27ADD75D1A6EDAC800C168C4 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utility.h; path = sources/Utility.h; sourceTree = SOURCE_ROOT; };
+		27ADD75E1A6EDAC800C168C4 /* Utility.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Utility.mm; path = sources/Utility.mm; sourceTree = SOURCE_ROOT; };
+		27ADD75F1A6EDAC800C168C4 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vertex.h; path = sources/Vertex.h; sourceTree = SOURCE_ROOT; };
+		27ADD76A1A6EDB5400C168C4 /* TextureProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureProtocol.h; path = sources/Textures/TextureProtocol.h; sourceTree = SOURCE_ROOT; };
+		27B168171A3376A30031C184 /* Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B1681A1A3376A30031C184 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		27B1681D1A3376A30031C184 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		27B1681E1A3376A30031C184 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		27B1681F1A3376A30031C184 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		27B169BD1A3379CA0031C184 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = "../glfw-3.0.4/build/src/Debug/libglfw3.a"; sourceTree = "<group>"; };
+		27B169C31A337D140031C184 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		27B169C51A337D300031C184 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		27B169C71A337D950031C184 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		27B169CB1A3385DB0031C184 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = "../glew-1.11.0/lib/libGLEW.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27B168141A3376A30031C184 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278320FC1A68562F00585E14 /* Awesomium.framework in Frameworks */,
+				278A09A91A3E0E0200714254 /* libz.dylib in Frameworks */,
+				278A09A71A3E05F900714254 /* libassimp.a in Frameworks */,
+				27B169C81A337D950031C184 /* QuartzCore.framework in Frameworks */,
+				27B169C61A337D300031C184 /* IOKit.framework in Frameworks */,
+				27B169CC1A3385DB0031C184 /* libGLEW.a in Frameworks */,
+				27B169C41A337D140031C184 /* OpenGL.framework in Frameworks */,
+				27B1681B1A3376A30031C184 /* Cocoa.framework in Frameworks */,
+				27B169BE1A3379CA0031C184 /* libglfw3.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27ADD7431A6ED9F000C168C4 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				27ADD76A1A6EDB5400C168C4 /* TextureProtocol.h */,
+				27ADD7481A6EDAB500C168C4 /* Texture.cpp */,
+				27ADD7491A6EDAB500C168C4 /* Texture.h */,
+				27ADD7461A6EDAB500C168C4 /* RenderTarget.cpp */,
+				27ADD7471A6EDAB500C168C4 /* RenderTarget.h */,
+			);
+			name = Textures;
+			sourceTree = "<group>";
+		};
+		27B1680E1A3376A30031C184 = {
+			isa = PBXGroup;
+			children = (
+				27B168201A3376A30031C184 /* 3d technics */,
+				27B168191A3376A30031C184 /* Frameworks */,
+				27B168181A3376A30031C184 /* Products */,
+				27D8F1A01A38C9C200D41CB4 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		27B168181A3376A30031C184 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27B168171A3376A30031C184 /* Playground.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27B168191A3376A30031C184 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				278320FB1A68562E00585E14 /* Awesomium.framework */,
+				278A09A81A3E0E0200714254 /* libz.dylib */,
+				278A09A61A3E05F900714254 /* libassimp.a */,
+				27B169CB1A3385DB0031C184 /* libGLEW.a */,
+				27B169C71A337D950031C184 /* QuartzCore.framework */,
+				27B169C51A337D300031C184 /* IOKit.framework */,
+				27B169C31A337D140031C184 /* OpenGL.framework */,
+				27B169BD1A3379CA0031C184 /* libglfw3.a */,
+				27B1681A1A3376A30031C184 /* Cocoa.framework */,
+				27B1681C1A3376A30031C184 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27B1681C1A3376A30031C184 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27B1681D1A3376A30031C184 /* AppKit.framework */,
+				27B1681E1A3376A30031C184 /* CoreData.framework */,
+				27B1681F1A3376A30031C184 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		27B168201A3376A30031C184 /* 3d technics */ = {
+			isa = PBXGroup;
+			children = (
+				27B169BF1A337A9F0031C184 /* Classes */,
+				271353151A6FC71E0076879B /* Images.xcassets */,
+				27B168211A3376A30031C184 /* Supporting Files */,
+			);
+			path = "3d technics";
+			sourceTree = "<group>";
+		};
+		27B168211A3376A30031C184 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				271353111A6FC70A0076879B /* main.cpp */,
+				271353121A6FC70A0076879B /* Playground-Info.plist */,
+				271353171A6FC7310076879B /* InfoPlist.strings */,
+				2713531A1A6FC73A0076879B /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27B169BF1A337A9F0031C184 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				27ADD74C1A6EDAC800C168C4 /* Application.cpp */,
+				27ADD74D1A6EDAC800C168C4 /* Application.h */,
+				27ADD74E1A6EDAC800C168C4 /* Camera.cpp */,
+				27ADD74F1A6EDAC800C168C4 /* Camera.h */,
+				27ADD7521A6EDAC800C168C4 /* Material.cpp */,
+				27ADD7531A6EDAC800C168C4 /* Material.h */,
+				27ADD7541A6EDAC800C168C4 /* Mesh.cpp */,
+				27ADD7551A6EDAC800C168C4 /* Mesh.h */,
+				27ADD7561A6EDAC800C168C4 /* MeshBuffer.cpp */,
+				27ADD7571A6EDAC800C168C4 /* MeshBuffer.h */,
+				27ADD7581A6EDAC800C168C4 /* pch.pch */,
+				27ADD7591A6EDAC800C168C4 /* Renderer.cpp */,
+				27ADD75A1A6EDAC800C168C4 /* Renderer.h */,
+				27ADD75B1A6EDAC800C168C4 /* Shader.cpp */,
+				27ADD75C1A6EDAC800C168C4 /* Shader.h */,
+				27ADD75D1A6EDAC800C168C4 /* Utility.h */,
+				27ADD75E1A6EDAC800C168C4 /* Utility.mm */,
+				27ADD75F1A6EDAC800C168C4 /* Vertex.h */,
+				27ADD7431A6ED9F000C168C4 /* Textures */,
+				27D9325B1A3CB87B008A67EF /* stb_image */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		27D8F1A01A38C9C200D41CB4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				271353A01A6FC8440076879B /* crytek-sponza */,
+				271353A11A6FC8440076879B /* shaders */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		27D9325B1A3CB87B008A67EF /* stb_image */ = {
+			isa = PBXGroup;
+			children = (
+				27ADD7451A6EDAA800C168C4 /* stb_image.h */,
+			);
+			name = stb_image;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27B168161A3376A30031C184 /* Playground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27B168481A3376A30031C184 /* Build configuration list for PBXNativeTarget "Playground" */;
+			buildPhases = (
+				27B168131A3376A30031C184 /* Sources */,
+				27B168141A3376A30031C184 /* Frameworks */,
+				27B168151A3376A30031C184 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Playground;
+			productName = "3d technics";
+			productReference = 27B168171A3376A30031C184 /* Playground.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27B1680F1A3376A30031C184 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Mike;
+			};
+			buildConfigurationList = 27B168121A3376A30031C184 /* Build configuration list for PBXProject "Playground" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27B1680E1A3376A30031C184;
+			productRefGroup = 27B168181A3376A30031C184 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27B168161A3376A30031C184 /* Playground */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27B168151A3376A30031C184 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271353141A6FC70A0076879B /* Playground-Info.plist in Resources */,
+				271353191A6FC7310076879B /* InfoPlist.strings in Resources */,
+				271353161A6FC71E0076879B /* Images.xcassets in Resources */,
+				271353A31A6FC8440076879B /* shaders in Resources */,
+				2713531C1A6FC73A0076879B /* Credits.rtf in Resources */,
+				271353A21A6FC8440076879B /* crytek-sponza in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27B168131A3376A30031C184 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27ADD7601A6EDAC800C168C4 /* Application.cpp in Sources */,
+				27ADD7631A6EDAC800C168C4 /* Material.cpp in Sources */,
+				271353131A6FC70A0076879B /* main.cpp in Sources */,
+				27ADD7681A6EDAC800C168C4 /* Utility.mm in Sources */,
+				27ADD7651A6EDAC800C168C4 /* MeshBuffer.cpp in Sources */,
+				27ADD74B1A6EDAB500C168C4 /* Texture.cpp in Sources */,
+				27ADD7611A6EDAC800C168C4 /* Camera.cpp in Sources */,
+				27ADD7661A6EDAC800C168C4 /* Renderer.cpp in Sources */,
+				27ADD7671A6EDAC800C168C4 /* Shader.cpp in Sources */,
+				27ADD74A1A6EDAB500C168C4 /* RenderTarget.cpp in Sources */,
+				27ADD7641A6EDAC800C168C4 /* Mesh.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		271353171A6FC7310076879B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				271353181A6FC7310076879B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2713531A1A6FC73A0076879B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2713531B1A6FC73A0076879B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27B168461A3376A30031C184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					GLEW_STATIC,
+					DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		27B168471A3376A30031C184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = GLEW_STATIC;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		27B168491A3376A30031C184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = sources/pch.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/glm",
+					"$(SRCROOT)/glfw-3.0.4/include",
+					"$(SRCROOT)/glew-1.11.0/include",
+					"$(SRCROOT)/assimp-3.1.1/include",
+				);
+				INFOPLIST_FILE = "Playground/Playground-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/glfw-3.0.4/build/src/Debug",
+					"$(SRCROOT)/glew-1.11.0/lib",
+					"$(SRCROOT)/assimp-3.1.1/build/code/Release",
+				);
+				PRODUCT_NAME = Playground;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		27B1684A1A3376A30031C184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = sources/pch.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/glm",
+					"$(SRCROOT)/glfw-3.0.4/include",
+					"$(SRCROOT)/glew-1.11.0/include",
+					"$(SRCROOT)/assimp-3.1.1/include",
+				);
+				INFOPLIST_FILE = "Playground/Playground-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/glfw-3.0.4/build/src/Debug",
+					"$(SRCROOT)/glew-1.11.0/lib",
+					"$(SRCROOT)/assimp-3.1.1/build/code/Release",
+				);
+				PRODUCT_NAME = Playground;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27B168121A3376A30031C184 /* Build configuration list for PBXProject "Playground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27B168461A3376A30031C184 /* Debug */,
+				27B168471A3376A30031C184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27B168481A3376A30031C184 /* Build configuration list for PBXNativeTarget "Playground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27B168491A3376A30031C184 /* Debug */,
+				27B1684A1A3376A30031C184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27B1680F1A3376A30031C184 /* Project object */;
+}
