@@ -59,7 +59,7 @@
 		27ADD7551A6EDAC800C168C4 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = sources/Mesh.h; sourceTree = SOURCE_ROOT; };
 		27ADD7561A6EDAC800C168C4 /* MeshBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MeshBuffer.cpp; path = sources/MeshBuffer.cpp; sourceTree = SOURCE_ROOT; };
 		27ADD7571A6EDAC800C168C4 /* MeshBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeshBuffer.h; path = sources/MeshBuffer.h; sourceTree = SOURCE_ROOT; };
-		27ADD7581A6EDAC800C168C4 /* pch.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pch.pch; path = sources/pch.pch; sourceTree = SOURCE_ROOT; };
+		27ADD7581A6EDAC800C168C4 /* pch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pch.h; path = sources/pch.h; sourceTree = SOURCE_ROOT; };
 		27ADD7591A6EDAC800C168C4 /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer.cpp; path = sources/Renderer.cpp; sourceTree = SOURCE_ROOT; };
 		27ADD75A1A6EDAC800C168C4 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer.h; path = sources/Renderer.h; sourceTree = SOURCE_ROOT; };
 		27ADD75B1A6EDAC800C168C4 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shader.cpp; path = sources/Shader.cpp; sourceTree = SOURCE_ROOT; };
@@ -189,7 +189,7 @@
 				27ADD7551A6EDAC800C168C4 /* Mesh.h */,
 				27ADD7561A6EDAC800C168C4 /* MeshBuffer.cpp */,
 				27ADD7571A6EDAC800C168C4 /* MeshBuffer.h */,
-				27ADD7581A6EDAC800C168C4 /* pch.pch */,
+				27ADD7581A6EDAC800C168C4 /* pch.h */,
 				27ADD7591A6EDAC800C168C4 /* Renderer.cpp */,
 				27ADD75A1A6EDAC800C168C4 /* Renderer.h */,
 				27ADD75B1A6EDAC800C168C4 /* Shader.cpp */,
@@ -405,21 +405,21 @@
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = sources/pch.pch;
+				GCC_PREFIX_HEADER = sources/pch.h;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/glm",
-					"$(SRCROOT)/glfw/include",
-					"$(SRCROOT)/glew/include",
-					"$(SRCROOT)/assimp/include",
+					"$(SRCROOT)/dependency/glm",
+					"$(SRCROOT)/dependency/glfw/include",
+					"$(SRCROOT)/dependency/glew/include",
+					"$(SRCROOT)/dependency/assimp/include",
 				);
 				INFOPLIST_FILE = "Playground/Playground-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/glfw/libs/OSX",
-					"$(SRCROOT)/glew/libs/OSX",
-					"$(SRCROOT)/assimp/libs/OSX",
+					"$(SRCROOT)/dependency/glfw/libs/OSX",
+					"$(SRCROOT)/dependency/glew/libs/OSX",
+					"$(SRCROOT)/dependency/assimp/libs/OSX",
 				);
 				PRODUCT_NAME = Playground;
 				WRAPPER_EXTENSION = app;
@@ -436,21 +436,21 @@
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = sources/pch.pch;
+				GCC_PREFIX_HEADER = sources/pch.h;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/glm",
-					"$(SRCROOT)/glfw/include",
-					"$(SRCROOT)/glew/include",
-					"$(SRCROOT)/assimp/include",
+					"$(SRCROOT)/dependency/glm",
+					"$(SRCROOT)/dependency/glfw/include",
+					"$(SRCROOT)/dependency/glew/include",
+					"$(SRCROOT)/dependency/assimp/include",
 				);
 				INFOPLIST_FILE = "Playground/Playground-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/glfw/libs/OSX",
-					"$(SRCROOT)/glew/libs/OSX",
-					"$(SRCROOT)/assimp/libs/OSX",
+					"$(SRCROOT)/dependency/glfw/libs/OSX",
+					"$(SRCROOT)/dependency/glew/libs/OSX",
+					"$(SRCROOT)/dependency/assimp/libs/OSX",
 				);
 				PRODUCT_NAME = Playground;
 				WRAPPER_EXTENSION = app;
