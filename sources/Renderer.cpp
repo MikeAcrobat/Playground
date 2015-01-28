@@ -8,8 +8,7 @@
 
 #include "Renderer.h"
 
-//static GBuffer::Ptr     g_buffer;
-//static RenderTarget::Ptr render_tagret;
+static FrameBuffer::Ptr render_target;
 static FrameBuffer::Ptr g_buffer;
 static unsigned int     window_w, window_h;
 static MeshBuffer::Ptr  quad;
@@ -44,21 +43,23 @@ void Renderer::init(unsigned int width, unsigned int height) {
     
     g_buffer->attach(width, height, GL_DEPTH_COMPONENT32F, GL_DEPTH_COMPONENT, GL_FLOAT, GL_DEPTH_ATTACHMENT);
     
-    g_buffer->complete();
+    bool g_complete = g_buffer->complete();
     
-//    g_buffer        = std::make_shared<GBuffer>(width, height);
-//    render_tagret   = std::make_shared<RenderTarget>(width, height);
-
+    render_target = std::make_shared<FrameBuffer>();
+    render_target->bind_buffer(GL_FRAMEBUFFER);
+    render_target->attach(width, height, GL_RGBA16F, GL_RGBA, GL_FLOAT, GL_COLOR_ATTACHMENT0);
+    bool r_complete = render_target->complete();
+    
     {
         quad = std::make_shared<MeshBuffer>();
         
         std::vector<Vertex> vertexes = {
-            {{  1.0,  1.0, 0.0 }, { 1.0, 1.0 }, {  0.0,  0.0, 0.0 }, {  0.0,  0.0, 0.0 }, {  0.0,  0.0, 0.0 }},
-            {{ -1.0,  1.0, 0.0 }, { 0.0, 1.0 }, {  0.0,  0.0, 0.0 }, {  0.0,  0.0, 0.0 }, {  0.0,  0.0, 0.0 }},
-            {{ -1.0, -1.0, 0.0 }, { 0.0, 0.0 }, {  0.0,  0.0, 0.0 }, {  0.0,  0.0, 0.0 }, {  0.0,  0.0, 0.0 }},
-            {{ -1.0, -1.0, 0.0 }, { 0.0, 0.0 }, {  0.0,  0.0, 0.0 }, {  0.0,  0.0, 0.0 }, {  0.0,  0.0, 0.0 }},
-            {{  1.0, -1.0, 0.0 }, { 1.0, 0.0 }, {  0.0,  0.0, 0.0 }, {  0.0,  0.0, 0.0 }, {  0.0,  0.0, 0.0 }},
-            {{  1.0,  1.0, 0.0 }, { 1.0, 1.0 }, {  0.0,  0.0, 0.0 }, {  0.0,  0.0, 0.0 }, {  0.0,  0.0, 0.0 }}
+            {{  1.0,  1.0, 0.0 }, { 1.0, 1.0 }, {  1.0,  0.0, 0.0 }, {  0.0,  1.0, 0.0 }, {  0.0,  0.0, 1.0 }},
+            {{ -1.0,  1.0, 0.0 }, { 0.0, 1.0 }, {  1.0,  0.0, 0.0 }, {  0.0,  1.0, 0.0 }, {  0.0,  0.0, 1.0 }},
+            {{ -1.0, -1.0, 0.0 }, { 0.0, 0.0 }, {  1.0,  0.0, 0.0 }, {  0.0,  1.0, 0.0 }, {  0.0,  0.0, 1.0 }},
+            {{ -1.0, -1.0, 0.0 }, { 0.0, 0.0 }, {  1.0,  0.0, 0.0 }, {  0.0,  1.0, 0.0 }, {  0.0,  0.0, 1.0 }},
+            {{  1.0, -1.0, 0.0 }, { 1.0, 0.0 }, {  1.0,  0.0, 0.0 }, {  0.0,  1.0, 0.0 }, {  0.0,  0.0, 1.0 }},
+            {{  1.0,  1.0, 0.0 }, { 1.0, 1.0 }, {  1.0,  0.0, 0.0 }, {  0.0,  1.0, 0.0 }, {  0.0,  0.0, 1.0 }}
         };
         
         std::vector<unsigned int> indexes = { 0, 1, 2, 3, 4, 5 };
@@ -78,7 +79,8 @@ void Renderer::render_frame(Mesh::Ptr __mesh__, Camera::Ptr camera) {
     
     // GEOMETRY PASS
     {
-        g_buffer->bind_buffer(GL_DRAW_FRAMEBUFFER, { GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2 } );
+        g_buffer->bind_buffer(GL_FRAMEBUFFER);
+        g_buffer->setup_draw_attachments({ GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2 });
         
         GL_DEBUG(glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT));
         GL_DEBUG(glEnable(GL_DEPTH_TEST));
@@ -110,6 +112,35 @@ void Renderer::render_frame(Mesh::Ptr __mesh__, Camera::Ptr camera) {
         __mesh__->render(mesh_renderer);
 
         g_buffer->unbind();
+        
+        /*******/
+        glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
+        glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
+        render_target->bind_buffer(GL_FRAMEBUFFER);
+        render_target->setup_draw_attachments( { GL_COLOR_ATTACHMENT0 } );
+        
+        glDepthMask(GL_FALSE);
+        GL_DEBUG(glClear(GL_COLOR_BUFFER_BIT));
+        GL_DEBUG(glDisable(GL_DEPTH_TEST));
+        
+        Shader::Ptr test_shader = ShaderPool::get_shader(ShaderPool::Type::Test);
+        test_shader->bind();
+
+        if (g_buffer->get_texture(GL_COLOR_ATTACHMENT0)) {
+            test_shader->bind_sampler("diffuse_texture", 0);
+            g_buffer->get_texture(GL_COLOR_ATTACHMENT0)->bind(0);
+        }
+        
+        if (g_buffer->get_texture(GL_COLOR_ATTACHMENT1)) {
+            test_shader->bind_sampler("normal_texture", 1);
+            g_buffer->get_texture(GL_COLOR_ATTACHMENT1)->bind(1);
+        }
+        
+        //TextureCache::load_from_file("crytek-sponza/zero_normal.tga")->bind(0);
+
+        Renderer::full_screen_path();
+        
+        render_target->unbind();
     }
     GLint half_w = (GLint)(window_w / 2.0f);
     GLint half_h = (GLint)(window_h / 2.0f);
@@ -119,15 +150,13 @@ void Renderer::render_frame(Mesh::Ptr __mesh__, Camera::Ptr camera) {
         g_buffer->display_color_attachment(GL_COLOR_ATTACHMENT0, 0,      half_h, half_w,     window_h);
         g_buffer->display_color_attachment(GL_COLOR_ATTACHMENT1, half_w, half_h, window_w,   window_h);
         g_buffer->display_color_attachment(GL_COLOR_ATTACHMENT2, 0,      0,      half_w,     half_h);
+        
         g_buffer->unbind();
     }
     {
-//        render_tagret->bind_for_reading();
-        
-        //glBlitFramebuffer(0, 0, window_w, window_h, half_w, 0,      window_w,   half_h,     GL_COLOR_BUFFER_BIT, GL_LINEAR);
-//        glBlitFramebuffer(0, 0, window_w, window_h, 0, 0,      window_w,   window_h,     GL_COLOR_BUFFER_BIT, GL_LINEAR);
-        
-//        render_tagret->unbind();
+        render_target->bind_buffer(GL_READ_FRAMEBUFFER);
+        render_target->display_color_attachment(GL_COLOR_ATTACHMENT0, half_w, 0, window_w, half_h);
+        render_target->unbind();
     }
 }
 

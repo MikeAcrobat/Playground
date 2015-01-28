@@ -292,11 +292,18 @@ bool Shader::bind_sampler(const std::string & name, int state) {
 }
 
 Shader::Ptr ShaderPool::get_shader(ShaderPool::Type type) {
-    static Shader::Ptr geom_shader = Shader::load_from_files("shaders/deferred_geometry.vs", "shaders/deferred_geometry.fs");
-    static Shader::Ptr ssao_shader = Shader::load_from_files("shaders/ssao.vs", "shaders/ssao.fs");
-    
-    if (type == Geometry)   return geom_shader;
-    if (type == SSAO_Pass)  return ssao_shader;
+    if (type == Geometry) {
+        static Shader::Ptr geom_shader = Shader::load_from_files("shaders/deferred_geometry.vs", "shaders/deferred_geometry.fs");
+        return geom_shader;
+    }
+    if (type == SSAO_Pass) {
+        static Shader::Ptr ssao_shader = Shader::load_from_files("shaders/ssao.vs", "shaders/ssao.fs");
+        return ssao_shader;
+    }
+    if (type == Test) {
+        static Shader::Ptr test_shader = Shader::load_from_files("shaders/test.vs", "shaders/test.fs");
+        return test_shader;
+    }
     
     return nullptr;
 }

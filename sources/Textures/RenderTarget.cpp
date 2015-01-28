@@ -21,7 +21,7 @@ FrameBuffer::~FrameBuffer(void) {
 
 void FrameBuffer::attach(unsigned int width, unsigned int height, GLint inner_format, GLenum format, GLenum pixel_type, GLenum target) {
     Texture2D::Ptr texture = std::make_shared<Texture2D>(width, height, inner_format, format, pixel_type, false, nullptr);
-    GL_DEBUG(glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, target, GL_TEXTURE_2D, texture->texture_name(), 0));
+    GL_DEBUG(glFramebufferTexture2D(GL_FRAMEBUFFER, target, GL_TEXTURE_2D, texture->texture_name(), 0));
     attachments[target] = texture;
 }
 
@@ -41,12 +41,22 @@ Texture2D::Ptr FrameBuffer::get_texture(GLenum target) {
     return attached_texture != attachments.end() ? attached_texture->second : nullptr;
 }
 
-void FrameBuffer::bind_buffer(GLenum target, std::vector<GLenum> attachments) {
+void FrameBuffer::bind_buffer(GLenum target) {
     GL_DEBUG(glBindFramebuffer(target, fbo));
+}
 
-    if (attachments.size() > 0 && target != GL_READ_FRAMEBUFFER) {
+void FrameBuffer::setup_draw_attachments(std::vector<GLenum> attachments) {
+    if (attachments.size() > 0) {
         GL_DEBUG(glDrawBuffers((GLsizei)attachments.size(), attachments.data()));
     }
+}
+
+void FrameBuffer::setup_draw_attachment(GLenum attachment) {
+    GL_DEBUG(glDrawBuffer(attachment));
+}
+
+void FrameBuffer::setup_read_attachment(GLenum attachment) {
+    GL_DEBUG(glReadBuffer(attachment));
 }
 
 void FrameBuffer::unbind() {

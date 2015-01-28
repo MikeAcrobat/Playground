@@ -25,7 +25,10 @@ public:
     
     Texture2D::Ptr get_texture(GLenum target);
     
-    void bind_buffer(GLenum target, std::vector<GLenum> attachments = std::vector<GLenum>());
+    void bind_buffer(GLenum target);
+    void setup_draw_attachments(std::vector<GLenum> attachments);
+    void setup_draw_attachment(GLenum attachment);
+    void setup_read_attachment(GLenum attachment);
     void unbind();
     
     void display_color_attachment(GLenum attachment, float x0, float y0, float x1, float y1);

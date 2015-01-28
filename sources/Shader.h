@@ -74,11 +74,14 @@ public:
     bool bind_sampler(const std::string & name, int state);
 };
 
+
+// TODO refactor this shit
 class ShaderPool {
 public:
     enum Type {
         Geometry,
         SSAO_Pass,
+        Test
     };
 
     static Shader::Ptr get_shader(Type type);
